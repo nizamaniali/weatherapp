@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Weather App</h2>
+    </div>
+
+    <div class="inputBox">
+      <input type="text" id="city" placeholder="City" />
+      <input type="submit" value="Submit" id="submit" onclick="weather()" />
+    </div>
+
+    <div class="weather-container">
+      <!-- Left Section -->
+      <div class="left-side">
+        <div class="temps">
+          <div>
+            <p class="maxTemp">Max Temp:</p>
+            <p class="maxTempValue"><strong id="maxTemp">24°C</strong></p>
+          </div>
+          <div>
+            <p class="minTemp">Min Temp:</p>
+            <p class="minTempValue"><strong id="minTemp">19°C</strong></p>
+          </div>
+          <div>
+            <p class="wind">Wind:</p>
+            <p class="windValue"><strong id="wind">1.25 Km/h</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather Box in the Center -->
+      <div class="weather-box">
+        <p class="city" id="cityName">Hyderabad, PK</p>
+        <div class="currentTemp" id="currTemp">20<span>°C</span></div>
+        <div class="feellike">
+          <p>Feels Like: <strong id="feellike">21°C</strong></p>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-side">
+        <div class="other-data">
+          <div>
+            <p>Humidity:</p>
+            <p><strong id="humidity">60%</strong></p>
+          </div>
+          <div>
+            <p>Pressure:</p>
+            <p><strong id="pressure">1013 hPa</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="openweather.js"></script>
+  </body>
+</html>
